@@ -1,25 +1,26 @@
-
-
-
 import java.util.Scanner;
 
 public class TaskN {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int zero = 0, positive = 0, negative = 0;
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+
+        int zeros = 0;
+        int positives = 0;
+        int negatives = 0;
 
         for (int i = 0; i < n; i++) {
-            int x = sc.nextInt();
-            if (x == 0) {
-                zero++;
-            } else if (x > 0) {
-                positive++;
+            int number = scanner.nextInt();
+
+            if (number == 0) {
+                zeros++;
+            } else if (number > 0) {
+                positives++;
             } else {
-                negative++;
+                negatives++;
             }
         }
 
-        System.out.println(zero + " " + positive + " " + negative);
+        System.out.println(zeros + " " + positives + " " + negatives);
     }
 }
