@@ -10,7 +10,6 @@ public class TaskA {
 
         int current = a;
         if (current % 2 != 0) {
-            // Если a — максимальное целое число, подходящих чисел нет.
             if (current == Integer.MAX_VALUE) {
                 System.out.println();
                 return;
@@ -24,7 +23,6 @@ public class TaskA {
             }
             result.append(current);
 
-            // Не допускаем переполнения при прибавлении 2.
             if (current == b || current == b - 1) {
                 break;
             }
