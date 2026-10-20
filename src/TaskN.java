@@ -22,5 +22,6 @@ public class TaskN {
         }
 
         System.out.println(zeros + " " + positives + " " + negatives);
+        scanner.close();
     }
 }
