@@ -5,13 +5,17 @@ public class TaskH {
         Scanner scanner = new Scanner(System.in);
         int x = scanner.nextInt();
 
-        int sum = 0;
+        StringBuilder result = new StringBuilder();
 
-        while (x > 0) {
-            sum += x % 10;
-            x /= 10;
+        for (int divisor = 1; divisor <= x; divisor++) {
+            if (x % divisor == 0) {
+                if (result.length() > 0) {
+                    result.append(' ');
+                }
+                result.append(divisor);
+            }
         }
 
-        System.out.println(sum);
+        System.out.println(result);
     }
 }

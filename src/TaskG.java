@@ -4,17 +4,12 @@ public class TaskG {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int x = scanner.nextInt();
-        int d = scanner.nextInt();
 
-        int count = 0;
-
-        while (x > 0) {
-            if (x % 10 == d) {
-                count++;
+        for (int divisor = 2; divisor <= x; divisor++) {
+            if (x % divisor == 0) {
+                System.out.println(divisor);
+                break;
             }
-            x /= 10;
         }
-
-        System.out.println(count);
     }
 }

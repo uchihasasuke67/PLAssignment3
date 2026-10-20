@@ -5,13 +5,14 @@ public class TaskI {
         Scanner scanner = new Scanner(System.in);
         int x = scanner.nextInt();
 
-        int reversed = 0;
+        int count = 0;
 
-        while (x > 0) {
-            reversed = reversed * 10 + x % 10;
-            x /= 10;
+        for (int divisor = 1; divisor <= x; divisor++) {
+            if (x % divisor == 0) {
+                count++;
+            }
         }
 
-        System.out.println(reversed);
+        System.out.println(count);
     }
 }
